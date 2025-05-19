@@ -1,0 +1,630 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less';
+
+@main-color: #05445E;
+
+// Override antd default values
+@menu-dark-bg: #05445E;
+@layout-sider-background: #05445E;
+@menu-dark-inline-submenu-bg: #08254f;
+@primary-color: #189AB4; // primary color for all components
+@link-color: #189AB4; // link color
+
+#root {
+	padding: 0;
+	margin: 0;
+}
+
+// Custom CSS properties
+.breadcrumb-header {
+	height: 85px !important;
+	background: #ffffff;
+	padding: 15px;
+	margin-top: 3px;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	top: 0;
+	left: 0;
+	outline: 0;
+}
+
+.clock {
+	margin: auto;
+	color: #00EEFF;
+	text-align: center;
+	margin-top: 20vh;
+}
+
+// .panel-buttons {
+// 	margin-top: 25%;
+// 	display: flex;
+// 	padding: 1rem 1rem 0 1rem;
+//  	width: 100%;
+// 	justify-content: space-evenly;
+// }
+
+// .panel-icon {
+// 	width: 110%;
+// 	background-color: #1D3876;
+// 	padding: 1rem;
+// 	text-align: center;
+// 	box-shadow: inset 0px 0px 5px #3CBCFF;
+// 	border: 1px solid #1D3876;
+// 	border-radius: 10px;
+// }
+
+.sub-panel-row {
+	margin-top: 5;
+	display: flex;
+	flex-direction: row;
+}
+
+.sub-panel-buttons {
+	margin-top: 5%;
+	padding: 1rem 1rem 0 1 rem;
+	justify-content: space-evenly;
+}
+
+.sub-panel-icon {
+	width: 100%;
+}
+
+
+.panel-name {
+	color: #01EAFD;
+	font-weight: 700;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.panel-title {
+	clip-path: polygon(0 0, 100% 0, 100% 7%, 69% 7%, 57% 13%, 39% 13%, 30% 7%, 0 7%);
+	background-image: radial-gradient(#050E39, #1F3373);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	color: #00EEFF;
+	font-size: 1.4rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.access-display {
+	position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 3;
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+}
+
+.access-popup {
+	position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+	height: 10vh;
+  width: 50%; /* Need a specific value to work */
+	background-color: white;
+	z-index: 4;
+	border-radius: 8px;
+}
+
+.main-content {
+	padding: 24px;
+	background: #ffffff;
+	min-height: 24px;
+}
+
+// Override primary color for button primary
+.ant-btn-primary {
+	color: #fff;
+	background: @main-color;
+	border-color: @main-color;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+	color: #fff;
+	background: #05445E;
+	border-color: #05445E;
+}
+
+.ant-input,
+.ant-select-selector,
+.ant-picker,
+.ant-modal-content,
+.ant-input-number,
+.ant-btn {
+	border-radius: 5px !important;
+}
+
+.w-100 {
+	width: 100%;
+}
+.mb-0 {
+	margin-bottom: 0px;
+}
+
+.header {
+	display: flex;
+}
+
+.menu {
+	.ant-menu-horizontal {
+		& > .ant-menu-submenu {
+			float: right;
+		}
+		border: none;
+	}
+	box-shadow: #e4ecef;
+	position: relative;
+	.ant-menu-submenu-title {
+		width: 64px;
+		height: 64px;
+		text-align: center;
+		padding-top: 8px;
+	}
+}
+
+.trigger {
+	margin-left: 16px;
+	margin-right: 16px;
+	align-self: center;
+}
+
+.menu-logo {
+	background-image: url('../../../src/images/logo-white.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 60px;
+	background-size: 100%;
+	margin: 20px;
+	color: #ffffff;
+}
+
+.ant-layout-sider-zero-width-trigger {
+	position: absolute;
+	top: 12px;
+	right: -50px;
+	z-index: 2;
+	width: 36px;
+	height: 42px;
+	color: @main-color;
+	// background: #fff;
+}
+
+.select-lab-form {
+	align-self: center;
+	display: flex;
+	margin-top: 25px;
+	margin-left: 25px;
+	width: 100%;
+}
+
+.ant-avatar {
+	height: 35px;
+	width: 35px;
+	line-height: 35px;
+}
+
+.equip-view-readonly .ant-picker-input > input[disabled],
+.equip-view-readonly.ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.equip-view-readonly.ant-input[disabled] {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.ant-steps-item-finish .ant-steps-item-icon {
+	background-color: @primary-color;
+	border-color: @primary-color;
+
+	.ant-steps-icon {
+		color: #fff;
+		stroke-width: 100px;
+		stroke: white;
+	}
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon {
+	background-color: #fff;
+	border-color: #000000d9;
+	.ant-steps-icon {
+		color: #000000d9;
+	}
+}
+
+.job-order-form {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.content-section {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+.jo-basic-table {
+	.ant-table-summary {
+		background-color: #fafafa;
+	}
+}
+
+.equip_search .ant-input {
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+}
+.equip_search .ant-btn {
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+.equip_search_div {
+	display: inline;
+	float: left;
+	margin: 0px 10px;
+}
+.context{
+	flex-direction:row;
+	display:flex;
+}
+.notice-board {
+	display: flex;
+	background-color: gray;
+	width: 60vw;
+	height: 83vh;
+	margin-top: 15.5vh;
+	line-height: 3.5vh;
+	margin-right: auto;
+	margin-left: 88px;
+	border-radius: 5px;
+}
+	.notice {
+	margin: 0 auto;
+	}
+
+.parent{
+	display: grid;
+}
+
+/****************************************** mobile ********************************************/
+
+@media only screen and (max-width: 1080.99px) {
+		.ant-layout-content {
+		position: relative;
+		overflow: hidden;
+		min-width: 100vw;
+	}
+
+	.panel-button-row {
+		height: 150px !important;
+		bottom: 10px;
+		line-height: 2vh !important;
+		margin-top: 50px;
+		margin-left: 400px;
+		right: auto;
+		left: 1px;
+		position: relative !important;
+	}
+
+	.panel-button {
+		line-height: 2vh !important;
+		width: 300px;
+		height: 90px !important;
+        justify-content: center !important;
+		text-align: center !important;
+	}
+
+.panel-header {
+	// position: absolute;
+    // margin: auto !important;
+    margin-left: 380px !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 2vh !important;
+    width: 50vw !important;
+    height: 10vh !important;
+    top: 0px !important;
+    color: black !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    line-height: 7vh !important;
+	display: flex !important;
+   	justify-content: center !important;
+	position: relative !important;
+}
+.panel-room {
+	font-size: 45px !important;
+	flex: auto;
+	background-color: black !important;
+	overflow: auto;
+	margin-right: 200px !important;
+	position: relative !important;
+	color: white;
+    justify-content: center !important;
+	text-align: center !important;
+}
+
+
+	.notice-board {
+		display: flex;
+		width: 80%;
+		height: 70vh;
+		background-color: gray;
+		// flex-direction: column;
+		// justify-content: center;
+		// margin-left: 0px;
+		margin: auto;
+		margin-top: 3vh;
+	}
+
+	.notice {
+	margin: 0 auto;
+	min-height: 100%;
+
+	}
+
+	.context{
+	flex-direction: column;
+	display:flex;
+}
+	.ant-layout-content {
+		flex-direction: column;
+
+	}
+
+	.ant-layout {
+		position: relative;
+		overflow: hidden;
+		min-width: 100vw;
+	}
+
+	.select-lab-form {
+		margin-left: 50px;
+	}
+
+	.header-lab-select .ant-form-item-label {
+		display: none;
+	}
+	.header-user-part > li > div > span > div > span:nth-child(2) {
+		display: none;
+	}
+
+	.job-order-form {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.content-section {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+
+
+}
+
+.panel-screen {
+	position: relative;
+}
+
+.ant-picker-input > input[disabled] {
+	color: rgb(36, 35, 35);
+}
+
+.ant-input[disabled] {
+	color: rgb(36, 35, 35);
+}
+
+.ant-input-number-disabled {
+	color: rgb(36, 35, 35);
+}
+
+.ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+	color: rgb(36, 35, 35);
+}
+
+
+
+// Pin Keypad
+.pin-keypad {
+	height: 1760px;
+	width: 1060px;
+	display: flex;
+	// flex-wrap: wrap;
+	z-index: 4;
+	margin: auto;
+	position: absolute;
+	flex-direction: column;
+	top: 10vh;
+}
+
+
+.pin-visual {
+	flex: 25%;
+	background-color: #0072d6;
+	text-align: center;
+	font-size: 7rem;
+	color: white;
+}
+
+.pin-keyboard {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 85%;
+}
+
+.pin-button {
+	background-color: #ffffff;
+	text-align: center;
+	font-size: 72px;
+	display: flex;
+	flex: 33%;
+	flex-direction: column;
+	border: 4px solid #0072d6;
+	line-height: 12vh;
+}
+
+.panel-background {
+	width: 900px;
+	height: 80vh;
+	padding: 15px;
+	background-image: linear-gradient(#273F91, #1B2D66);
+	margin: auto;
+	border: 5px solid black;
+	position: relative;
+	filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+	text-align: center;
+	z-index: 4;
+}
+
+.auth-screen {
+	width: 1080px;
+	height: 1920px;
+	padding: 15px;
+	margin: auto;
+	border: 5px solid black;
+	position: absolute;
+	z-index: 5;
+}
+
+.auth-screen-title {
+	margin: auto;
+	text-align: center;
+	margin-top: 40vh;
+	color: white;
+	font-size: 120px;
+	font-weight: bold;
+}
+
+.auth-screen-text {
+	margin: auto;
+	text-align: center;
+	margin-top: 5vh;
+	color: white;
+	font-size: 72px;
+	padding: 5px;
+}
+
+.panel-header {
+	position: absolute;
+	margin-right: auto;
+	margin-left: 500px;
+	display: flex;
+   justify-content: center;
+	margin-top: 2vh;
+	width: 20vw;
+	height: 10vh;
+	top: 0px;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 7vh;
+}
+
+.panel-icon {
+	flex: 2;
+	text-align: center;
+	font-size: 12px;
+}
+
+img {
+	// height: 100%;
+	// width: 100px;
+	max-width: 300px;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+	top: 0px;
+	left: 15px;
+	position: absolute;
+}
+
+.panel-room {
+	flex: 4.5;
+	text-align: left;
+	line-height: 8vh;
+	margin: auto;
+}
+
+.panel-clock {
+	flex: 4.5;
+	line-height: 10vh;
+}
+
+.panel-button-row {
+	// background-color: yellow;
+	margin-right: 10em;
+	right: 1px;
+	left: auto;
+	display: flex;
+	// width: 30vw;
+	// height: 12vh;
+	width: 18vw;
+	height: 7vh;
+	// bottom: 0px;
+	position: absolute;
+	z-index: 3;
+	flex: 1;
+    flex-direction: column-reverse;
+	bottom: 15px;
+
+}
+
+.panel-button {
+	// height: 4vh;
+	border-radius: 12px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	text-align: center;
+	flex: 50%;
+	flex-direction: column;
+}
+
+div.panel-button:hover {
+	background-color: '#000000' !important;
+	color: blue;
+}
+
+.panel-icon {
+	margin-top: 2vh;
+	color: white;
+}
+
+.panel-text {
+	font-weight: bold;
+	font-size: 48px;
+	color: white;
+	// margin-top: 1vh;
+}
+
+
+
+.notice-title {
+	font-weight: bold;
+	font-size: 120px;
+}
+
+.notice-data {
+	font-size: 72px;
+	padding: 0;
+	margin-top: -50px;
+}
+
+.minified-clock {
+	color: white;
+	font-weight: bold;
+	text-align: right;
+	margin-right: 20px;
+	display: flex;
+	flex-direction: column;
+}
